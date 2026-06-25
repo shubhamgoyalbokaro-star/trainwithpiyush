@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Train With Piyush
+
+Premium personal training & online fitness coaching website for **Piyush Sharma** — built with Next.js 16, TypeScript, and Tailwind CSS.
+
+## Features
+
+- Dark cinematic UI with electric lime accent
+- 9 pages: Home, About, Programs, Results, Method, AI Fit Assessment, Blog, FAQ, Contact
+- AI-powered Fit Assessment (rule-based program matcher)
+- Smart FAQ search
+- WhatsApp contact integration
+- Mobile-responsive design
+- SEO optimized
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+cd train-with-piyush
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Deploy
 
-To learn more about Next.js, take a look at the following resources:
+Recommended: [Vercel](https://vercel.com) — connect repo and deploy. Point `trainwithpiyush.com` DNS to Vercel.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Content Updates
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Edit `src/content/site.ts` for all text, programs, testimonials, and FAQs.
+Edit `src/content/site.ts` → `blogPosts` for blog articles.
 
-## Deploy on Vercel
+## Pending from Piyush
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Google Drive photos (headshot, hero, transformations)
+- Confirm phone number (7667561663)
+- Gym address: 2nd Floor, Reliance Digital Building, Chas, Bokaro (Google Maps linked on site)
+- Logo file (currently text wordmark)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Tech Stack
+
+- **Next.js 16** (App Router)
+- **TypeScript**
+- **Tailwind CSS v4**
+- **Framer Motion**
+- **Lucide Icons**
+
+## Future Enhancements
+
+- Client portal
+- Online payments (Razorpay/Stripe)
+- OpenAI API for enhanced Q&A (`OPENAI_API_KEY`)
+- CMS (Sanity) for easy admin updates
+- Hindi language toggle
