@@ -13,11 +13,11 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#070809",
+          background: "#2563eb",
           borderRadius: 8,
-          color: "#c8f542",
-          fontSize: 14,
-          fontWeight: 800,
+          color: "#ffffff",
+          fontSize: 13,
+          fontWeight: 700,
         }}
       >
         TP

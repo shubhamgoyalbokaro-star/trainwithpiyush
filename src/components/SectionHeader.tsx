@@ -18,11 +18,11 @@ export function SectionHeader({
   return (
     <div className={cn(align === "center" && "text-center mx-auto max-w-2xl", className)}>
       {eyebrow && (
-        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-accent">
+        <p className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-accent-soft">
           {eyebrow}
         </p>
       )}
-      <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+      <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
         {title}
       </h2>
       {description && (

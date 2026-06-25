@@ -60,12 +60,12 @@ export function FitAssessment() {
       <div className="mb-8">
         <div className="mb-2 flex items-center justify-between text-sm text-muted">
           <span className="flex items-center gap-2">
-            <Sparkles size={14} className="text-accent" />
+            <Sparkles size={14} className="text-accent-soft" />
             AI-Powered Fit Assessment
           </span>
           <span>{done ? "Complete" : `Step ${step + 1} of ${assessmentQuestions.length}`}</span>
         </div>
-        <div className="h-1.5 overflow-hidden rounded-full bg-border">
+        <div className="h-1 overflow-hidden rounded-full bg-surface">
           <motion.div
             className="h-full bg-accent"
             initial={{ width: 0 }}
@@ -83,7 +83,7 @@ export function FitAssessment() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.25 }}
-            className="rounded-2xl border border-border bg-card p-8"
+            className="luxury-card p-8"
           >
             <h2 className="font-display text-2xl font-bold">{current.question}</h2>
             <div className="mt-6 grid gap-3">
@@ -92,7 +92,7 @@ export function FitAssessment() {
                   key={opt.value}
                   type="button"
                   onClick={() => setAnswer(opt.value)}
-                  className="flex items-center gap-4 rounded-xl border border-border bg-background p-4 text-left transition hover:border-accent/40 hover:bg-card-hover"
+                  className="flex items-center gap-4 rounded-2xl border border-border bg-white p-4 text-left transition hover:bg-surface"
                 >
                   <span className="text-2xl">{opt.icon}</span>
                   <span className="font-medium">{opt.label}</span>
@@ -115,9 +115,9 @@ export function FitAssessment() {
             key="result"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="rounded-2xl border border-accent/30 bg-card p-8 glow-accent"
+            className="luxury-card p-8 luxury-shadow"
           >
-            <div className="flex items-center gap-2 text-accent">
+            <div className="flex items-center gap-2 text-accent-soft">
               <CheckCircle2 size={20} />
               <span className="text-sm font-semibold uppercase tracking-wider">Your Recommended Path</span>
             </div>
@@ -125,15 +125,15 @@ export function FitAssessment() {
             <h2 className="mt-4 font-display text-3xl font-bold">{result.programName}</h2>
             <p className="mt-2 text-lg text-muted">{result.headline}</p>
 
-            <div className="mt-6 rounded-xl border border-border bg-background p-5">
-              <p className="text-sm font-semibold text-accent">Coach&apos;s note</p>
+            <div className="mt-6 rounded-2xl bg-surface p-5">
+              <p className="text-sm font-medium text-accent-soft">Coach&apos;s note</p>
               <p className="mt-2 text-sm leading-relaxed text-muted italic">&ldquo;{result.coachMessage}&rdquo;</p>
             </div>
 
             <ul className="mt-6 space-y-2">
               {result.reasoning.map((r) => (
                 <li key={r} className="flex items-start gap-2 text-sm text-foreground/90">
-                  <CheckCircle2 size={14} className="mt-0.5 shrink-0 text-accent" />
+                  <CheckCircle2 size={14} className="mt-0.5 shrink-0 text-accent-soft" />
                   {r}
                 </li>
               ))}
@@ -144,7 +144,7 @@ export function FitAssessment() {
               <ol className="mt-3 space-y-2">
                 {result.nextSteps.map((s, i) => (
                   <li key={s} className="flex items-center gap-3 text-sm text-muted">
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-accent/10 text-xs font-bold text-accent">
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-surface text-xs font-semibold text-accent-soft">
                       {i + 1}
                     </span>
                     {s}
@@ -158,14 +158,14 @@ export function FitAssessment() {
                 href={whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 font-bold text-background transition hover:bg-accent-dim"
+                className="btn-primary flex-1 px-6 py-3"
               >
                 Book Free Consult on WhatsApp
                 <ArrowRight size={16} />
               </a>
               <Link
                 href="/contact"
-                className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-border px-6 py-3 font-semibold transition hover:border-accent/40"
+                className="btn-secondary flex-1 px-6 py-3"
               >
                 Contact Form
               </Link>

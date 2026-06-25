@@ -31,13 +31,13 @@ export default function AboutPage() {
               {site.longBio.why}
             </div>
 
-            <blockquote className="mt-8 border-l-2 border-accent pl-6 italic text-foreground/90">
+            <blockquote className="mt-8 border-l-4 border-accent pl-6 font-light italic text-foreground/90">
               &ldquo;{site.longBio.drives}&rdquo;
             </blockquote>
           </div>
 
           <div>
-            <div className="rounded-2xl border border-border bg-card p-8">
+            <div className="luxury-card p-8">
               <h3 className="font-display text-xl font-bold">Credentials</h3>
               <dl className="mt-6 space-y-4">
                 <div>
@@ -74,7 +74,7 @@ export default function AboutPage() {
               <ul className="mt-4 space-y-2">
                 {site.longBio.personal.map((fact) => (
                   <li key={fact} className="flex items-start gap-2 text-sm text-muted">
-                    <Check size={14} className="mt-0.5 shrink-0 text-accent" />
+                    <Check size={14} className="mt-0.5 shrink-0 text-accent-soft" />
                     {fact}
                   </li>
                 ))}
@@ -84,20 +84,20 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-t border-border bg-card/20 py-20">
+      <section className="border-t border-border bg-surface py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 md:grid-cols-2">
-            <div className="rounded-2xl border border-accent/20 bg-card p-8">
-              <h3 className="font-display text-xl font-bold text-accent">Ideal for</h3>
+            <div className="luxury-card p-8 ring-1 ring-blue-100">
+              <h3 className="font-display text-xl font-semibold text-accent">Ideal for</h3>
               <ul className="mt-4 space-y-2">
                 {site.method.idealFor.map((item) => (
                   <li key={item} className="flex items-center gap-2 text-sm text-muted">
-                    <Check size={14} className="text-accent" /> {item}
+                    <Check size={14} className="text-accent-soft" /> {item}
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="rounded-2xl border border-border bg-card p-8">
+            <div className="luxury-card p-8">
               <h3 className="font-display text-xl font-bold">Not the right fit for</h3>
               <ul className="mt-4 space-y-2">
                 {site.method.notFor.map((item) => (

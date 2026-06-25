@@ -14,7 +14,6 @@ export default function HomePage() {
       <Hero />
       <StatsBar />
 
-      {/* Method preview */}
       <section className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow="The Piyush Method"
@@ -23,14 +22,11 @@ export default function HomePage() {
         />
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {site.method.pillars.map((pillar, i) => (
-            <div
-              key={pillar.title}
-              className="rounded-2xl border border-border bg-card p-6 transition hover:border-accent/20"
-            >
-              <span className="font-display text-3xl font-bold text-accent/40">
+            <div key={pillar.title} className="luxury-card p-6">
+              <span className="font-display text-3xl font-light text-accent-soft-light">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="mt-3 font-display text-lg font-bold">{pillar.title}</h3>
+              <h3 className="mt-3 font-display text-lg font-semibold tracking-tight">{pillar.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">{pillar.description}</p>
             </div>
           ))}
@@ -38,15 +34,14 @@ export default function HomePage() {
         <div className="mt-8">
           <Link
             href="/method"
-            className="inline-flex items-center gap-2 font-semibold text-accent hover:gap-3 transition-all"
+            className="inline-flex items-center gap-2 font-medium text-foreground hover:gap-3 transition-all"
           >
             Explore the full method <ArrowRight size={16} />
           </Link>
         </div>
       </section>
 
-      {/* Programs */}
-      <section className="border-y border-border bg-card/30 py-24">
+      <section className="border-y border-border bg-surface py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             eyebrow="Programs"
@@ -62,7 +57,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why Piyush */}
       <section className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow="Why Train With Piyush"
@@ -87,19 +81,18 @@ export default function HomePage() {
               desc: "30+ clients coached with measurable results — fat loss, muscle gain, and full lifestyle change.",
             },
           ].map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="rounded-2xl border border-border bg-card p-8">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10">
-                <Icon className="text-accent" size={24} />
+            <div key={title} className="luxury-card p-8">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-surface">
+                <Icon className="text-accent-soft" size={22} />
               </div>
-              <h3 className="mt-5 font-display text-xl font-bold">{title}</h3>
+              <h3 className="mt-5 font-display text-xl font-semibold tracking-tight">{title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">{desc}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Results preview */}
-      <section className="border-t border-border bg-card/20 py-24">
+      <section className="border-t border-border bg-white py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             eyebrow="Real Results"
@@ -115,7 +108,7 @@ export default function HomePage() {
           <div className="mt-10 text-center">
             <Link
               href="/results"
-              className="inline-flex items-center gap-2 font-semibold text-accent"
+              className="inline-flex items-center gap-2 font-medium text-foreground"
             >
               View all success stories <ArrowRight size={16} />
             </Link>
@@ -123,14 +116,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* AI Assessment CTA */}
       <section className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-3xl border border-border bg-card">
-          <div className="absolute inset-0 bg-gradient-to-r from-accent/5 to-transparent" />
-          <div className="relative grid gap-8 p-10 lg:grid-cols-2 lg:items-center lg:p-16">
+        <div className="luxury-card overflow-hidden">
+          <div className="hero-glow grid gap-8 p-10 lg:grid-cols-2 lg:items-center lg:p-16">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">AI Fit Assessment</p>
-              <h2 className="mt-4 font-display text-3xl font-bold sm:text-4xl">
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent-soft">AI Fit Assessment</p>
+              <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight sm:text-4xl">
                 Not sure which program fits you?
               </h2>
               <p className="mt-4 text-muted">
@@ -138,10 +129,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="flex flex-col gap-4 sm:flex-row lg:justify-end">
-              <Link
-                href="/assessment"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-8 py-4 font-bold text-background transition hover:bg-accent-dim"
-              >
+              <Link href="/assessment" className="btn-primary px-8 py-4">
                 {site.ctas.assessment}
                 <ArrowRight size={18} />
               </Link>

@@ -25,9 +25,9 @@ export default function MethodPage() {
           {site.method.pillars.map((pillar, i) => (
             <div
               key={pillar.title}
-              className="group rounded-2xl border border-border bg-card p-8 transition hover:border-accent/30"
+              className="group luxury-card p-8 transition hover:luxury-shadow"
             >
-              <span className="font-display text-5xl font-bold text-accent/20 transition group-hover:text-accent/40">
+              <span className="font-display text-5xl font-light text-accent-soft-light transition group-hover:text-accent-soft">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <h3 className="mt-4 font-display text-xl font-bold">{pillar.title}</h3>
@@ -37,15 +37,15 @@ export default function MethodPage() {
         </div>
       </section>
 
-      <section className="border-y border-border bg-card/20 py-20">
+      <section className="border-y border-border bg-surface py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl font-bold">What Piyush does differently</h2>
-          <div className="mt-10 overflow-hidden rounded-2xl border border-border">
+          <div className="mt-10 overflow-x-auto rounded-2xl luxury-card">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-border bg-card">
-                  <th className="p-4 text-left font-semibold text-muted">Others often...</th>
-                  <th className="p-4 text-left font-semibold text-accent">Piyush instead...</th>
+                <tr className="border-b border-border bg-surface">
+                  <th className="p-4 text-left font-medium text-muted">Others often...</th>
+                  <th className="p-4 text-left font-medium text-foreground">Piyush instead...</th>
                 </tr>
               </thead>
               <tbody>
@@ -69,12 +69,12 @@ export default function MethodPage() {
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="grid gap-8 md:grid-cols-2">
-          <div className="rounded-2xl border border-accent/20 bg-card p-8">
-            <h3 className="font-display text-xl font-bold text-accent">Who it&apos;s for</h3>
+          <div className="luxury-card p-8 ring-1 ring-blue-100">
+            <h3 className="font-display text-xl font-semibold text-accent">Who it&apos;s for</h3>
             <ul className="mt-6 space-y-3">
               {site.method.idealFor.map((item) => (
                 <li key={item} className="flex items-center gap-3 text-muted">
-                  <Check size={16} className="shrink-0 text-accent" />
+                  <Check size={16} className="shrink-0 text-accent-soft" />
                   {item}
                 </li>
               ))}
@@ -94,13 +94,13 @@ export default function MethodPage() {
         </div>
       </section>
 
-      <section className="border-t border-border bg-card/20 py-20">
+      <section className="border-t border-border bg-white py-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-2xl font-bold text-center">Coach&apos;s voice</h2>
           <div className="mt-8 space-y-6">
             {site.aiVoice.samples.map((sample) => (
-              <div key={sample.q} className="rounded-2xl border border-border bg-card p-6">
-                <p className="font-medium text-accent">{sample.q}</p>
+              <div key={sample.q} className="luxury-card p-6">
+                <p className="font-medium text-accent-soft">{sample.q}</p>
                 <p className="mt-3 text-sm leading-relaxed text-muted">{sample.a}</p>
               </div>
             ))}

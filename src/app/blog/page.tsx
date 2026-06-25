@@ -23,14 +23,14 @@ export default function BlogPage() {
           {blogPosts.map((post) => (
             <article
               key={post.slug}
-              className="group flex flex-col rounded-2xl border border-border bg-card overflow-hidden transition hover:border-accent/20"
+              className="group luxury-card flex flex-col overflow-hidden transition hover:luxury-shadow"
             >
-              <div className="h-2 bg-gradient-to-r from-accent/60 to-accent/20" />
+              <div className="h-1 bg-gradient-to-r from-accent to-accent-soft-light" />
               <div className="flex flex-1 flex-col p-8">
-                <span className="text-xs font-semibold uppercase tracking-wider text-accent">
+                <span className="text-xs font-medium uppercase tracking-wider text-accent-soft">
                   {post.category}
                 </span>
-                <h2 className="mt-3 font-display text-xl font-bold leading-snug group-hover:text-accent transition-colors">
+                <h2 className="mt-3 font-display text-xl font-semibold leading-snug tracking-tight group-hover:text-accent-soft transition-colors">
                   <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                 </h2>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">{post.excerpt}</p>
@@ -40,7 +40,7 @@ export default function BlogPage() {
                   </span>
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="inline-flex items-center gap-1 text-sm font-semibold text-accent"
+                    className="inline-flex items-center gap-1 text-sm font-medium text-foreground"
                   >
                     Read <ArrowRight size={14} />
                   </Link>

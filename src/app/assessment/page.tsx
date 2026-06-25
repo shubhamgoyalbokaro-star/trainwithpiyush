@@ -20,7 +20,7 @@ export default function AssessmentPage() {
       <section className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
         <FitAssessment />
 
-        <div className="mx-auto mt-16 max-w-2xl rounded-2xl border border-border bg-card/50 p-6 text-center text-sm text-muted">
+        <div className="mx-auto mt-16 max-w-2xl luxury-card p-6 text-center text-sm font-light text-muted">
           <p>{site.disclaimer}</p>
           <p className="mt-2">
             This assessment provides coaching recommendations only — not medical advice.

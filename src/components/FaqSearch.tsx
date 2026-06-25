@@ -19,36 +19,33 @@ export function FaqSearch() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Ask anything — fat loss, online coaching, beginners..."
-          className="w-full rounded-2xl border border-border bg-card py-4 pl-12 pr-4 text-foreground placeholder:text-muted focus:border-accent/50 focus:outline-none focus:ring-1 focus:ring-accent/30"
+          className="w-full rounded-2xl border border-border bg-white py-4 pl-12 pr-4 text-foreground shadow-sm placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-foreground/5"
         />
         <div className="mt-2 flex items-center justify-center gap-2 text-xs text-muted">
-          <Sparkles size={12} className="text-accent" />
+          <Sparkles size={12} className="text-accent-soft" />
           AI-powered search across {site.faqs.length} answers
         </div>
       </div>
 
-      <div className="mx-auto mt-12 max-w-3xl space-y-4">
+      <div className="mx-auto mt-12 max-w-3xl space-y-3">
         {results.length === 0 && query ? (
-          <div className="rounded-2xl border border-border bg-card p-8 text-center">
-            <Bot className="mx-auto text-accent" size={32} />
+          <div className="luxury-card p-8 text-center">
+            <Bot className="mx-auto text-accent-soft" size={32} />
             <p className="mt-4 font-medium">No exact match found</p>
-            <p className="mt-2 text-sm text-muted">
+            <p className="mt-2 text-sm font-light text-muted">
               For medical, injury, or supplement questions, please book a free consultation with Piyush directly.
             </p>
           </div>
         ) : (
           results.map((faq) => (
-            <details
-              key={faq.q}
-              className="group rounded-2xl border border-border bg-card open:border-accent/20"
-            >
-              <summary className="cursor-pointer list-none p-6 font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+            <details key={faq.q} className="luxury-card group open:luxury-shadow">
+              <summary className="cursor-pointer list-none p-6 font-medium marker:content-none [&::-webkit-details-marker]:hidden">
                 <span className="flex items-center justify-between gap-4">
                   {faq.q}
-                  <span className="text-accent transition group-open:rotate-45">+</span>
+                  <span className="text-muted transition group-open:rotate-45">+</span>
                 </span>
               </summary>
-              <div className="border-t border-border px-6 pb-6 pt-2 text-sm leading-relaxed text-muted">
+              <div className="border-t border-border px-6 pb-6 pt-2 text-sm font-light leading-relaxed text-muted">
                 {faq.a}
               </div>
             </details>

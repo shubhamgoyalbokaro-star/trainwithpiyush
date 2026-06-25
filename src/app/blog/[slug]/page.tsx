@@ -51,13 +51,13 @@ export default async function BlogPostPage({ params }: Props) {
       <article className="mx-auto max-w-3xl px-4 py-20 sm:px-6 lg:px-8">
         <Link
           href="/blog"
-          className="inline-flex items-center gap-2 text-sm text-muted hover:text-accent"
+          className="inline-flex items-center gap-2 text-sm text-muted hover:text-foreground"
         >
           <ArrowLeft size={14} /> Back to blog
         </Link>
 
         <div className="mt-8">
-          <span className="text-xs font-semibold uppercase tracking-wider text-accent">
+          <span className="text-xs font-medium uppercase tracking-wider text-accent-soft">
             {post.category}
           </span>
           <h1 className="mt-3 font-display text-4xl font-bold leading-tight sm:text-5xl">

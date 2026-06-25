@@ -18,7 +18,7 @@ export default function ResultsPage() {
         description="No miracle claims — just consistent coaching, sustainable nutrition, and accountability that delivers measurable results."
       />
 
-      <section className="border-b border-border bg-card/30 py-12">
+      <section className="border-b border-border bg-surface py-12">
         <div className="mx-auto flex max-w-7xl flex-wrap justify-center gap-8 px-4 sm:px-6 lg:px-8">
           {[
             { value: "30+", label: "Clients Coached" },
@@ -27,7 +27,7 @@ export default function ResultsPage() {
             { value: "3", label: "Featured Transformations" },
           ].map((s) => (
             <div key={s.label} className="text-center">
-              <div className="font-display text-3xl font-bold text-accent">{s.value}</div>
+              <div className="font-display text-3xl font-semibold tracking-tight text-foreground">{s.value}</div>
               <div className="text-sm text-muted">{s.label}</div>
             </div>
           ))}
@@ -41,7 +41,7 @@ export default function ResultsPage() {
           ))}
         </div>
 
-        <div className="mt-16 rounded-2xl border border-dashed border-border bg-card/30 p-10 text-center">
+        <div className="mt-16 rounded-2xl border border-dashed border-border bg-surface p-10 text-center">
           <p className="font-display text-lg font-semibold">Transformation gallery coming soon</p>
           <p className="mt-2 text-sm text-muted">
             Before/after photos and videos will be added once assets are uploaded to the media folder.

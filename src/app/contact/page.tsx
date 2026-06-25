@@ -50,19 +50,19 @@ export default function ContactPage() {
                 </a>
               </li>
               <li className="flex items-start gap-3 text-sm">
-                <Mail size={18} className="mt-0.5 text-accent" />
+                <Mail size={18} className="mt-0.5 text-accent-soft" />
                 <div>
                   <p className="font-semibold">Email</p>
-                  <a href={`mailto:${site.email}`} className="text-muted hover:text-accent">
+                  <a href={`mailto:${site.email}`} className="text-muted hover:text-foreground">
                     {site.email}
                   </a>
                 </div>
               </li>
               <li className="flex items-start gap-3 text-sm">
-                <Share2 size={18} className="mt-0.5 text-accent" />
+                <Share2 size={18} className="mt-0.5 text-accent-soft" />
                 <div>
                   <p className="font-semibold">Instagram</p>
-                  <a href={site.instagram} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-accent">
+                  <a href={site.instagram} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-foreground">
                     {site.instagramHandle}
                   </a>
                 </div>
@@ -75,7 +75,7 @@ export default function ContactPage() {
               </li>
               <li className="text-sm text-muted">{site.serviceArea}</li>
               <li className="flex items-start gap-3 text-sm">
-                <Clock size={18} className="mt-0.5 text-accent" />
+                <Clock size={18} className="mt-0.5 text-accent-soft" />
                 <div>
                   <p className="font-semibold">Hours</p>
                   <p className="text-muted">{site.businessHours}</p>
@@ -96,7 +96,7 @@ export default function ContactPage() {
           </div>
 
           <div className="lg:col-span-3">
-            <div className="rounded-2xl border border-border bg-card p-8">
+            <div className="luxury-card p-8">
               <h2 className="font-display text-xl font-bold">Send a message</h2>
               <p className="mt-2 text-sm text-muted">
                 Fill out the form and it will open WhatsApp with your details pre-filled.

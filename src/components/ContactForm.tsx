@@ -27,18 +27,21 @@ Message: ${form.message}`;
     setSubmitted(true);
   };
 
+  const inputClass =
+    "w-full rounded-2xl border border-border bg-white px-4 py-3.5 text-foreground transition focus:border-foreground/20 focus:outline-none focus:ring-2 focus:ring-foreground/5";
+
   if (submitted) {
     return (
-      <div className="rounded-2xl border border-accent/30 bg-card p-10 text-center">
-        <CheckCircle2 className="mx-auto text-accent" size={48} />
-        <h3 className="mt-4 font-display text-2xl font-bold">Message sent!</h3>
-        <p className="mt-2 text-muted">
+      <div className="luxury-card p-10 text-center">
+        <CheckCircle2 className="mx-auto text-accent-soft" size={48} />
+        <h3 className="mt-4 font-display text-2xl font-semibold tracking-tight">Message sent!</h3>
+        <p className="mt-2 font-light text-muted">
           Your inquiry was sent via WhatsApp. Piyush typically responds {site.responseTime.toLowerCase()}.
         </p>
         <button
           type="button"
           onClick={() => setSubmitted(false)}
-          className="mt-6 text-sm text-accent hover:underline"
+          className="mt-6 text-sm font-medium text-foreground hover:underline"
         >
           Send another message
         </button>
@@ -58,7 +61,7 @@ Message: ${form.message}`;
             required
             value={form.name}
             onChange={(e) => setForm({ ...form, name: e.target.value })}
-            className="w-full rounded-xl border border-border bg-background px-4 py-3 text-foreground focus:border-accent/50 focus:outline-none"
+            className={inputClass}
             placeholder="Your name"
           />
         </div>
@@ -72,7 +75,7 @@ Message: ${form.message}`;
             required
             value={form.email}
             onChange={(e) => setForm({ ...form, email: e.target.value })}
-            className="w-full rounded-xl border border-border bg-background px-4 py-3 text-foreground focus:border-accent/50 focus:outline-none"
+            className={inputClass}
             placeholder="you@email.com"
           />
         </div>
@@ -87,7 +90,7 @@ Message: ${form.message}`;
             id="phone"
             value={form.phone}
             onChange={(e) => setForm({ ...form, phone: e.target.value })}
-            className="w-full rounded-xl border border-border bg-background px-4 py-3 text-foreground focus:border-accent/50 focus:outline-none"
+            className={inputClass}
             placeholder="+91 ..."
           />
         </div>
@@ -99,7 +102,7 @@ Message: ${form.message}`;
             id="program"
             value={form.program}
             onChange={(e) => setForm({ ...form, program: e.target.value })}
-            className="w-full rounded-xl border border-border bg-background px-4 py-3 text-foreground focus:border-accent/50 focus:outline-none"
+            className={inputClass}
           >
             <option value="">Select a program</option>
             {site.programs.map((p) => (
@@ -123,20 +126,17 @@ Message: ${form.message}`;
           rows={5}
           value={form.message}
           onChange={(e) => setForm({ ...form, message: e.target.value })}
-          className="w-full resize-none rounded-xl border border-border bg-background px-4 py-3 text-foreground focus:border-accent/50 focus:outline-none"
+          className={`${inputClass} resize-none`}
           placeholder="Tell me about your goals, experience, and what you're looking for..."
         />
       </div>
 
-      <button
-        type="submit"
-        className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent py-4 font-bold text-background transition hover:bg-accent-dim sm:w-auto sm:px-10"
-      >
+      <button type="submit" className="btn-primary w-full py-4 sm:w-auto sm:px-10">
         Send via WhatsApp
         <Send size={18} />
       </button>
 
-      <p className="text-xs text-muted">
+      <p className="text-xs font-light text-muted">
         By submitting, you agree to be contacted about coaching services. {site.disclaimer}
       </p>
     </form>

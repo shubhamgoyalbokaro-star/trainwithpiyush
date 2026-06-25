@@ -34,14 +34,14 @@ export function LocationLink({
         target="_blank"
         rel="noopener noreferrer"
         className={cn(
-          "group flex items-start gap-3 rounded-xl border border-border bg-card p-4 transition hover:border-accent/30 hover:bg-card-hover",
+          "group flex items-start gap-3 luxury-card p-4 transition hover:luxury-shadow",
           className
         )}
       >
-        <MapPin size={20} className="mt-0.5 shrink-0 text-accent" />
-        <div className="flex-1 text-sm text-muted">
+        <MapPin size={20} className="mt-0.5 shrink-0 text-accent-soft" />
+        <div className="flex-1 text-sm font-light text-muted">
           {content}
-          <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-accent">
+          <span className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-foreground">
             Open in Google Maps
             <ExternalLink size={12} className="transition group-hover:translate-x-0.5" />
           </span>
@@ -56,16 +56,16 @@ export function LocationLink({
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "group inline-flex items-start gap-2 text-sm text-muted transition hover:text-accent",
+        "group inline-flex items-start gap-2 text-sm font-light text-muted transition hover:text-foreground",
         className
       )}
     >
-      <MapPin size={16} className="mt-0.5 shrink-0 text-accent" />
+      <MapPin size={16} className="mt-0.5 shrink-0 text-accent-soft" />
       <span>
         {showFullAddress ? (
           <>
             {site.address.full}
-            <span className="mt-1 flex items-center gap-1 text-xs font-semibold text-accent">
+            <span className="mt-1 flex items-center gap-1 text-xs font-medium text-foreground">
               View on Google Maps
               <ExternalLink size={11} />
             </span>
@@ -73,9 +73,6 @@ export function LocationLink({
         ) : (
           <>
             {site.location} · {site.gym}
-            <span className="ml-1 inline-flex items-center gap-0.5 text-xs text-accent opacity-0 transition group-hover:opacity-100">
-              <ExternalLink size={10} />
-            </span>
           </>
         )}
       </span>
@@ -89,12 +86,9 @@ export function MapsButton({ className }: { className?: string }) {
       href={site.mapsUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className={cn(
-        "inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-semibold transition hover:border-accent/40 hover:text-accent",
-        className
-      )}
+      className={cn("btn-secondary", className)}
     >
-      <MapPin size={16} className="text-accent" />
+      <MapPin size={16} className="text-accent-soft" />
       Get Directions
     </a>
   );
